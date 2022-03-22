@@ -33,6 +33,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use(requestLogger)
+app.use(express.static('build'))
 
 app.get('/', (req, res) => {
   res.send('<h1>Hello World!</h1>')
